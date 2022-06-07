@@ -63,7 +63,7 @@ spec:
             allowedHosts:
               - github.com
             allowedOwners:
-              - raf-backstage-demo  
+              - sabre1041-backstage-demo  
 
   steps:
     - id: template
@@ -92,7 +92,7 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: public
         deleteBranchOnMerge: true
-        access: raf-backstage-demo/${{ parameters.owner }}        
+        access: sabre1041-backstage-demo/${{ parameters.owner }}        
 
     - id: register
       name: Register
@@ -122,7 +122,7 @@ spec:
       name: make a pr with the new argocd
       action: publish:github:pull-request
       input:
-        repoUrl: github.com?repo=${{ parameters.application.split(":")[1] }}-gitops&owner=raf-backstage-demo
+        repoUrl: github.com?repo=${{ parameters.application.split(":")[1] }}-gitops&owner=sabre1041-backstage-demo
         branchName: ${{ parameters.component_id }}
         title: argocd apps for ${{ parameters.component_id }}
         description: argocd apps ${{ parameters.component_id }}

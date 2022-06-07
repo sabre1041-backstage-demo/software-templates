@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/raf-backstage-demo/${{ values.component_id }}
+    repoURL: https://github.com/sabre1041-backstage-demo/${{ values.component_id }}
     targetRevision: HEAD
     path: .helm/chart
     helm:
